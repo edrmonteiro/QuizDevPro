@@ -12,8 +12,9 @@ def index(request):
 def game(request, id):
     question = Game.objects.filter(available=True).order_by('id')[id - 1]
     context = {'id' : id, 'question': question}
+    
     #return HttpResponse("Hello World")
-    return render (request, 'quiz/game.html')
+    return render (request, 'quiz/game.html', context)
 
 def score(request):
     #return HttpResponse("Hello World")

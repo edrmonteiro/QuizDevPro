@@ -21,7 +21,7 @@
                     <h2>Question {{ id }}</h2>
                     <h3>{{ question.title }}</h3>
 
-                    {% for item in question.options.array  %}
+                    {% for item in question.options  %}
                     <div class="choice-container">
                         <p class="choice-prefix">{% cycle 'A' 'B' 'C' 'D' %} </p>
                         <p class="choice-text">{{ item }}</p>
