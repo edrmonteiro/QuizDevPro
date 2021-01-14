@@ -1,9 +1,13 @@
 from django.contrib import admin
-from .models import Game, Student
+from .models import Question, Student
 
 # Register your models here.
-class GameAdmin(admin.ModelAdmin):
+@admin.register(Question )
+class QuestionAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'available']
 
-admin.site.register(Game,GameAdmin )
-admin.site.register(Student)
+
+@admin.register(Student)
+class StudentAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'email', 'created']
+

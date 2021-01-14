@@ -1,7 +1,7 @@
 from django.forms import ModelForm
-from .models import Game
+from .models import Student
 
-class StudentForm(Modelform):
+class StudentForm(ModelForm):
     class Meta:
-        model = Aluno
-        fiels = ['nome', 'email']
+        model = Student
+        fields = ['name','email']
