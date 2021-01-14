@@ -12,3 +12,8 @@ class Game (models.Model):
         (2, 'C'),
         (3, 'D'),
     ])
+
+class Student(models.Model):
+    name = models.CharField(max_length=64)
+    email = models.EmailField(unique=True)
+    created = models.DateTimeField(auto_now_add = True)
